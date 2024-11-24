@@ -1,9 +1,9 @@
 export default async function User({ params }) {
     const { userId } = await params;
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users`);
+    const res = await fetch(`https://673736a9aafa2ef222330e54.mockapi.io/users`);
     const { users } = await res.json();
     const user = users.find((user) => user.id === userId);
-    console.log(user);
+
     
     return (
       <div className="min-h-screen bg-gray-50 py-8">

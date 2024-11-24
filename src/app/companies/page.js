@@ -1,10 +1,9 @@
 import Link from "next/link";
 
 export default async function CompanyList() {
- const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/companies`);
+ const res = await fetch("https://673736a9aafa2ef222330e54.mockapi.io/company");
  const { companies } = await res.json();
- console.log(companies);
-
+ 
  return (
    <div className="min-h-screen bg-gray-50">
      <div className="max-w-4xl mx-auto p-6">

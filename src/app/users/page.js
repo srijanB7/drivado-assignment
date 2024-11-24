@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function UserList() {
   const res = await fetch(`https://673736a9aafa2ef222330e54.mockapi.io/users`);
   const users  = await res.json();
-  console.log(users);
+
 
   return (
     <div className="min-h-screen bg-gray-50">

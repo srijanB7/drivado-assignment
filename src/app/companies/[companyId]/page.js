@@ -123,14 +123,14 @@ export default async function User({ params }) {
 }
 
 async function getCompanyDetails(companyId) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/companies`);
+  const res = await fetch("https://673736a9aafa2ef222330e54.mockapi.io/company");
   const { companies } = await res.json();
   const company = companies.find((company) => company.id === companyId);
   return company;
 }
 
 async function getUserOfCurrentCompany(companyId) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users`);
+  const res = await fetch(`https://673736a9aafa2ef222330e54.mockapi.io/users`);
   const { users } = await res.json();
   const filteredUsers = await users.filter(
     (user) => user.companyId === companyId
