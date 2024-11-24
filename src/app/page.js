@@ -17,7 +17,6 @@ export default function Home() {
           {/* Company Card */}
           <Link 
             href="/companies" 
-            prefetch={true}
             className="group relative bg-white p-8 rounded-xl shadow-sm hover:shadow-xl 
                      transition-all duration-300 border border-gray-100"
           >
@@ -72,7 +71,6 @@ export default function Home() {
           {/* Users Card */}
           <Link 
             href="/users" 
-            prefetch={true}
             className="group relative bg-white p-8 rounded-xl shadow-sm hover:shadow-xl 
                      transition-all duration-300 border border-gray-100"
           >
