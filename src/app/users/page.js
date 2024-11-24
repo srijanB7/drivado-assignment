@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export default async function UserList() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users`);
-  const { users } = await res.json();
+  const res = await fetch(`https://673736a9aafa2ef222330e54.mockapi.io/users`);
+  const users  = await res.json();
   console.log(users);
 
   return (
