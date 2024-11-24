@@ -123,14 +123,14 @@ export default async function User({ params }) {
 }
 
 async function getCompanyDetails(companyId) {
-  const res = await fetch("http://localhost:3000/api/companies");
+  const res = await fetch("/api/companies");
   const { companies } = await res.json();
   const company = companies.find((company) => company.id === companyId);
   return company;
 }
 
 async function getUserOfCurrentCompany(companyId) {
-  const res = await fetch("http://localhost:3000/api/users");
+  const res = await fetch("/api/users");
   const { users } = await res.json();
   const filteredUsers = await users.filter(
     (user) => user.companyId === companyId

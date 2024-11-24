@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default async function CompanyList() {
- const res = await fetch("http://localhost:3000/api/companies");
+ const res = await fetch("/api/companies");
  const { companies } = await res.json();
  console.log(companies);
 

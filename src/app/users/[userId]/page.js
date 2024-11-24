@@ -1,6 +1,6 @@
 export default async function User({ params }) {
     const { userId } = await params;
-    const res = await fetch("http://localhost:3000/api/users");
+    const res = await fetch("/api/users");
     const { users } = await res.json();
     const user = users.find((user) => user.id === userId);
     console.log(user);
