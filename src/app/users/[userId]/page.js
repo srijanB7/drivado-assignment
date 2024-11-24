@@ -1,7 +1,7 @@
 export default async function User({ params }) {
     const { userId } = await params;
     const res = await fetch(`https://673736a9aafa2ef222330e54.mockapi.io/users`);
-    const { users } = await res.json();
+    const users = await res.json();
     const user = users.find((user) => user.id === userId);
 
     

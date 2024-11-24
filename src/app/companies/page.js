@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default async function CompanyList() {
  const res = await fetch("https://673736a9aafa2ef222330e54.mockapi.io/company");
- const { companies } = await res.json();
+ const companies = await res.json();
  
  return (
    <div className="min-h-screen bg-gray-50">
